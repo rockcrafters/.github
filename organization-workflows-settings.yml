@@ -1,0 +1,6 @@
+workflows_repository: .build
+include_workflows_repository: false
+exclude:
+  repositories:
+  - '.admin'
+  - '.github'
