@@ -43,7 +43,7 @@ To join the Ubuntu ROCKs project we'll have to host your GitHub repository withi
 
 For the moment this process is manual, so please open a new issue to initiate your onboarding process.
 
-### Creating my first ROCK
+<!-- ### Creating my first ROCK
 
 Once your onboarding process is finalized, you'll find your application repository `<app>` hosted at `https://github.com/ubuntu-rocks/<app>`. Now, to containerize your application into a ROCK, you just need to follow these steps:
 
@@ -58,4 +58,4 @@ And that's it! You can then pull and use your ROCK as any other container image.
 ## 👩‍💻 Useful resources
 
 Coming soon: CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md, SUPPORT.md	
-
+ -->
