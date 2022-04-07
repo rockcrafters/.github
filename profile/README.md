@@ -1,6 +1,6 @@
     
 <div align="center">
- <img align="center" src="assets/logo.gif">
+ <img align="center" src="https://github.com/ubuntu-rocks/.github/blob/main/profile/assets/logo.gif?raw=true">
  
  :construction: This project is a work in progress :construction:
 
