@@ -32,7 +32,6 @@ The ROCK build system complements your typical container image build (e.g. from 
  - **consistent:** the internals of the ROCK container image are predictable and consistent, as its structure is compliant with OCI and enforced at build time;
  - **performant:** ROCKs are optimised for size, startup time, speed, memory and rollout efficiency;
  - **open:** this is an open-source project, with an open design and open development;
- - Optimise for size, startup time, speed, memory and rollout efficiency;
  - **ruled by meritocracy:** the aim is to have field experts take responsibility for their ROCKs;
  - **opinionated:** a ROCK offers the best user experience for the most prevalent 90% use cases;
  - **driven by community:** fair, consistent, accountable governance of an Ubuntu community.
