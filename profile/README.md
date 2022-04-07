@@ -33,7 +33,7 @@ The ROCK build system complements your typical container image build (e.g. from 
  - **performant:** ROCKs are optimised for size, startup time, speed, memory and rollout efficiency;
  - **open:** this is an open-source project, with an open design and open development;
  - **ruled by meritocracy:** the aim is to have field experts take responsibility for their ROCKs;
- - **opinionated:** a ROCK offers the best user experience for the most prevalent 90% use cases;
+ - **opinionated:** a ROCK focus on the best user experience for the most prevalent use cases;
  - **driven by community:** fair, consistent, accountable governance of an Ubuntu community.
 
 
