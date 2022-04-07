@@ -25,7 +25,7 @@ The big difference between the two relies mainly on the ROCK's design and supply
 
 The ROCK build system complements your typical container image build (e.g. from a Dockerfile) by offering additional steps which will make sure your final container image is:
 
- - **the latest & greatest:** the ROCK profits from the underlying Ubuntu's software release updates, keeping your container images always up to date with upstream;
+ - **the latest & greatest:** the ROCKs machinery provides the build infrastructure, flows, and publication mechanisms in order to build both _edge_ channels delivering upstream-centric releases on Day 1 and _stable_ LTS channels with long-term maintained releases and security updates;
  - **production-grade:** the ROCK build system only builds the container image if it is compliant with the latest standards, secure, and passes all the tests;
  - **dependable:** new ROCKs are released with the same cadence as Ubuntu LTS releases and as soon as there are new security updates upstream;
  - **ubiquitous:** support for all major architectures, and publish in all major registries and marketplaces;
