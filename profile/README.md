@@ -15,7 +15,7 @@ Here are a few things you should know before you jump in.
 
 ### What is a ROCK?
 
-A ROCK is a **container image**. 
+A ROCK is a **[container image](https://ubuntu.com/containers/what-are-containers)**. ROCKs are [cloud-native](https://github.com/cncf/toc/blob/main/DEFINITION.md) artefacts, compliant with [the OCI standard](https://github.com/opencontainers/image-spec/).
 
 ### How is it different from a regular Docker image?
 
