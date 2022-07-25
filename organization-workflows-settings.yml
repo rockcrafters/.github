@@ -6,3 +6,4 @@ exclude:
   - '.admin'
   - '.github'
   - 'rocks-pipelines'
+  - 'mock-rock'
