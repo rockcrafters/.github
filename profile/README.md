@@ -1,6 +1,6 @@
     
 <div align="center">
- <img align="center" width="40px" src="https://github.com/ubuntu-rocks/.github/blob/main/profile/assets/logo.gif?raw=true">
+ <img align="center" width="50px" src="https://github.com/ubuntu-rocks/.github/blob/main/profile/assets/logo.png?raw=true">
  
 
  # Welcome to the Ubuntu ROCKs playground! 👋 
