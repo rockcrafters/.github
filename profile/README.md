@@ -40,34 +40,70 @@ Once your onboarding process is finalized, you'll find your ROCKs Project `<rock
 At this stage, you are ready to start building and publishing your ROCKs. Read the #FAQ below, for
 a detailed list of actions that will guide you through this process.
 
-## ❓ FAQ
+#### Step-by-step
 
- - **Does my ROCKs project need to have a special structure?**
+ 1. **Make sure your ROCKs project is structured the right way**
 
-Yes! There is a convention in place whereby a ROCKs Project is deemed to be valid if,
+There is a convention in place whereby a ROCKs Project is deemed to be valid if,
 and only if, it is structured a certain way. There is an example of a ROCKs project at
 <https://github.com/ubuntu-rocks/mock-rock> that you can use as a template for your own repository.
+ 
+ 2. **Test your changes in development branches**
 
- - **Do I need to build the ROCKs myself?**
+As a best practice and before committing to a channel branch (next step), make sure the new changes you are introducing are actually ready for publishing. You can add any CI/CD you want to your repository...it is yours after all, so if you have ROCK-specific tests you'd like to run, go ahead.
 
-No. [This organization](https://github.com/ubuntu-rocks) has a [centralized build repository](https://github.com/ubuntu-rocks/.build) from where all ROCKs are built, tested and published, automatically. 
-NOTE: you can nonetheless add any CI/CD you want to your repository...it is yours after all, so if you have ROCK-specific tests you'd like to run, go ahead.
+ 3. **Commit to channel branches**
 
- - **Does this centralized build repository run for all branches and commits in my repository?**
+When ready to publish a new version of a ROCK, you should commit your changes (from your development branch) to a **channel** branch. Example:
 
-Not for all. There are some important conventions you must be aware of:
-  1. the organization will only build ROCKs for channels that are named according to: **channels/\<track\>/\<risk\>/...**. Tracks and Risks are inherited concepts from Snaps, so if you're not
-familiar with those, please read <https://snapcraft.io/docs/channels>.
-  2. the organization with regularly look for new commits in these "channel" branches. If you
-have pushed new commits since the last build, then a new build will be triggered for the most recent
-commit in your channel branch.
+```bash
+git checkout -b channels/1.0/edge
+git push origin channels/1.0/edge
+```
 
- - **How do I know if my commit has triggered a new centralized build?**
+The naming convention for a channel branch is: *channels/\<track\>/\<risk\>/\<free text\>*. Tracks and risks are inherited concepts from Snaps, so if you're not familiar with those, please read <https://snapcraft.io/docs/channels>. If *\<risk\>* is empty, there will be no default risk for releasing your ROCK, and thus.
 
-Organization scans are quite frequent, so once you've pushed to a channel branch and waited for a couple of minutes, you should see your commit being "checked". These [GitHub Checks](https://docs.github.com/en/rest/checks) will hint you on where your commit is within the build pipeline. Once
-the organization workflows are finished, you will also see a new Issue created in your repository,
-announcing the build report. When successful, a Git tag is also created, pointing to your commit,
-to associate a specific ROCK build with your commit (i.e. all builds are traceable!).
+ 4. **Wait for a notification indicating the end of the ROCK build process**
+  
+[This organization](https://github.com/ubuntu-rocks) has a [centralized build repository](https://github.com/ubuntu-rocks/.build) from where all ROCKs are built, tested and published, automatically. This CI/CD pipeline will only build ROCKs for channels branches. The organization with regularly (as frequently as every 5 minutes) look for new commits in these "channel" branches. If you have pushed new commits since the last build, then a new build will be triggered for the most recent commit in your channel branch. 
+
+During a build, the build-triggering commit will be updated with "checks". These [GitHub Checks](https://docs.github.com/en/rest/checks) will hint you on where your commit is within the build pipeline.
+
+ 5. **Find your new ROCK revision**
+
+At the end of every successful CI/CD pipeline, your ROCK will be pushed to multiple registries, with an OCI tag that has the following format: *\<rock name\>:\<rock version\>-\<ubuntu base\>_\<revision number\>*.
+
+To pin point the commit corresponding to that revision of your ROCK, an immutable Git tag will also be created an pushed into your ROCK project, with the following naming convention: *channels/\<track\>/\<rock name\>/\<rock version\>/\<ubuntu base\>/\<revision number\>*.
+
+ 6. **Release your ROCK into new channels**
+
+If you've specified the risk in the channel branch name (like the example above), then, upon a successful build, the CI/CD will automatically <u>request</u> your ROCK to be released into the provided track and risk, from the channel branch name. 
+
+How can you <u>request</u> the release of your ROCK?
+ - Option 1 - via the GitHub web interface:
+    - go to the [centralized build repository](https://github.com/ubuntu-rocks/.build)
+    - navigate to [Actions](https://github.com/ubuntu-rocks/.build/actions)
+    - select the ["Release my ROCK" workflow](https://github.com/ubuntu-rocks/.build/actions/workflows/release-my-rock.yml)
+    - manually run the workflow, by clicking on the "Run workflow" button on the right side, and filling in the necessary attributes.
+ - Option 2 - via Git tags
+    - checkout an already existing build Git tag, with the desired ROCK revision number (aka *channels/\<track\>/\<rock name\>/\<rock version\>/\<ubuntu base\>/\<revision number\>*)
+    - re-tag this Git tag into the following format: *release/\<rock name\>/\<revision number\>/\<track\>/\<risk\>*
+    - push the release tag
+
+ 7. **Wait for your ROCK to be released**
+
+Once more, the centralized build processes will pick up your release request, and release your ROCK into the desired track/channel. A GitHub release will be created upon a successful release, associated with your Git tag.
+
+ 8. **Find your ROCK released in the registry**
+
+Alongside your first OCI tag, upon each release you will also find the original revision of your ROCK re-published with new OCI tags:
+
+  - *\<rock name\>:\<rock version\>-\<ubuntu base\>_\<risk\>_\<revision number\>*
+  - *\<rock name\>:\<rock version\>-\<ubuntu base\>_\<risk\>*
+  - *\<rock name\>:\<rock version\>_\<risk\>*
+  - *\<rock name\>:\<risk\>*
+  - *\<rock name\>:\<track\>*
+    - this last one is only published when you're releasing to the "stable" risk.
 <!-- 
 
 ## 👩‍💻 Useful resources
