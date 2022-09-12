@@ -61,7 +61,7 @@ git checkout -b channels/1.0/edge
 git push origin channels/1.0/edge
 ```
 
-The naming convention for a channel branch is: *channels/\<track\>/\<risk\>/\<free text\>*. Tracks and risks are inherited concepts from Snaps, so if you're not familiar with those, please read <https://snapcraft.io/docs/channels>. If *\<risk\>* is empty, there will be no default risk for releasing your ROCK, and thus.
+The naming convention for a channel branch is: *channels/\<track\>/\<risk\>/\<free text\>*. Tracks and risks are inherited concepts from Snaps, so if you're not familiar with those, please read <https://snapcraft.io/docs/channels>. If *\<risk\>* is empty, there will be no default risk for releasing your ROCK, and thus a Git "release" tag won't be created (you'll have to create it manually later on, as if you were releasing it for the first time - see point 6. below).
 
  4. **Wait for a notification indicating the end of the ROCK build process**
   
@@ -71,7 +71,7 @@ During a build, the build-triggering commit will be updated with "checks". These
 
  5. **Find your new ROCK revision**
 
-At the end of every successful CI/CD pipeline, your ROCK will be pushed to multiple registries, with an OCI tag that has the following format: *\<rock name\>:\<rock version\>-\<ubuntu base\>_\<revision number\>*.
+At the end of every successful CI/CD pipeline, your ROCK will be pushed to multiple registries, with an OCI tag that has the following format: *\<rock name\>:\<rock version\>-\<ubuntu base\>\_\<revision number\>*.
 
 To pin point the commit corresponding to that revision of your ROCK, an immutable Git tag will also be created an pushed into your ROCK project, with the following naming convention: *channels/\<track\>/\<rock name\>/\<rock version\>/\<ubuntu base\>/\<revision number\>*.
 
@@ -98,9 +98,9 @@ Once more, the centralized build processes will pick up your release request, an
 
 Alongside your first OCI tag, upon each release you will also find the original revision of your ROCK re-published with new OCI tags:
 
-  - *\<rock name\>:\<rock version\>-\<ubuntu base\>_\<risk\>_\<revision number\>*
-  - *\<rock name\>:\<rock version\>-\<ubuntu base\>_\<risk\>*
-  - *\<rock name\>:\<rock version\>_\<risk\>*
+  - *\<rock name\>:\<rock version\>-\<ubuntu base\>\_\<risk\>\_\<revision number\>*
+  - *\<rock name\>:\<rock version\>-\<ubuntu base\>\_\<risk\>*
+  - *\<rock name\>:\<rock version\>\_\<risk\>*
   - *\<rock name\>:\<risk\>*
   - *\<rock name\>:\<track\>*
     - this last one is only published when you're releasing to the "stable" risk.
