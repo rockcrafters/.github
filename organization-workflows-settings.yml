@@ -8,3 +8,4 @@ exclude:
   - 'rocks-pipelines'
   - 'mock-rock'
   - '.build'
+  - 'docker-library-official-images'
