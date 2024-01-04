@@ -5,7 +5,6 @@ exclude:
   repositories:
   - '.admin'
   - '.github'
-  - 'rocks-pipelines'
   - 'mock-rock'
   - '.build'
   - 'docker-library-official-images'
