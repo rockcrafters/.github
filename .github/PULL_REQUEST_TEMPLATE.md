@@ -4,8 +4,6 @@ Fixes # .
  - 
 
 
-- [ ] I have signed the [CLA](http://www.ubuntu.com/legal/contributors/)?
-
 -----
 
 *Picture of a cool ROCK:*

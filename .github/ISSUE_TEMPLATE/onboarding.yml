@@ -2,6 +2,7 @@ name: '🤝 Ubuntu Rocks - Member Onboarding'
 description: Become a contributing member of the Rocks Community
 title: "[onboarding] <replace by your name/username>"
 labels: ["onboarding"]
+projects: ["ubuntu-rocks/2"]
 body:
   - type: markdown
     attributes:
