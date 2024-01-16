@@ -1,112 +1,165 @@
-    
-<div align="center">
- <img align="center" width="50px" src="https://github.com/ubuntu-rocks/.github/blob/main/profile/assets/logo.png?raw=true">
- 
 
- # Welcome to the Ubuntu ROCKs playground! 👋 
+<div align="center">
+
+<img align="center" width="50px" src="https://github.com/ubuntu-rocks/.github/blob/main/profile/assets/logo.png?raw=true">
+
+# Welcome to the Rocks Community playground! 👋
+
+**The world’s best portfolio and community for production-grade container
+images.**
+
+A place for community members to learn, practice and share.
+
 </div>
 
-If you're looking to build a top-shelf container image, you are in the right place.
+## 🍿 Before you get started
 
-## 🍿 Before you get started...
+The Rocks Community is your hub for exploring Ubuntu Rocks and everything "containers". Whether you're a seasoned Rockcraft user or Chisel enthusiast, this community is an inclusive space for learning, sharing, and connecting with fellow Ubuntu container developers.
 
-Here are a few things you should know before you jump in.
+### Community Engagement Model
 
-### What is a ROCK?
+The goal is to have a contributor/collaborator engagement model that motivates people to build rocks. Community members are expected to:
 
-A ROCK is a **[container image](https://ubuntu.com/containers/what-are-containers)**. ROCKs are [cloud-native](https://github.com/cncf/toc/blob/main/DEFINITION.md) artefacts, compliant with [the OCI standard](https://github.com/opencontainers/image-spec/).
+- work together on shared projects,
+- have clear and open access for collaboration,
+- participate in simple peer-review processes,
+- follow workflows that are open to change,
+- have equal opportunity/level playing field.
 
-### How is it different from a regular Docker image?
+## 🌈 Be Part of the Rocks Community
 
-Both are container images, and both are compatible with all de facto container runtimes and orchestration engines out there (like Docker and Kubernetes).
+Whether it is about rocks, Chisel, or Ubuntu containers in general, your participation in the community is more than welcome! If you are joining as someone who has something to share or someone who simply wants to learn, please remember that this is an open space for people who embrace the same interests.
 
-The big difference between the two relies mainly on the ROCK's design and supply chain. Rocks
-are built from Ubuntu, thus you should expect **production-grade**, **dependable** and **open** container images, which are **driven by the community**. Given their heritage, ROCKs profit
-from Ubuntu's freshness, making them **the latest & greatest** when it comes to security updates
-and content delivery. Their OCI compliance is enhanced with predictable constructs and
-**opinionated** definitions, giving users the most **consistent** and predictable Ubuntu experience.
+There are many ways you can participate in the Rocks Community. Just find the right level of engagement that fits you:
 
+- Join the [Rocks Community space in Matrix](https://matrix.to/#/#rocks:ubuntu.com), which is your direct line of communication to both developers and users;
+- The [Rocks Discourse](https://discourse.ubuntu.com/c/rocks) is where contributors shape ideas through open discussions;
+- To become an official member of the Rocks Community, you may apply to be an external collaborator in this [Rocks Community Playground](https://github.com/ubuntu-rocks), putting you on a path to eventually becoming an official [Ubuntu Member](https://ubuntu.com/community/membership) and contributing to our Ubuntu Rocks.
 
-## 🌈 Joining the Ubuntu ROCKs project
+### Membership Application
 
-To join the Ubuntu ROCKs project we'll have to host your GitHub repository within [this GitHub organisation](https://github.com/ubuntu-rocks).
+The [Rocks Community Playground](https://github.com/ubuntu-rocks) is a shared GitHub organization for members of the Rocks Community to get some hands-on and share their rocks.
 
-For the moment this process is manual, so please open a new issue to initiate your onboarding process.
+Is it meant to be a safe space for open collaboration and as such, in order to become an external collaborator, you must meet the following requirements:
+
+- Agree to the [Ubuntu Code of Conduct](https://ubuntu.com/community/governance/code-of-conduct);
+  - (Optional) Although not required for the community playground, we’d recommend [signing this Code of Conduct](https://launchpad.net/codeofconduct), as it would simplify a potential [application to become an official Ubuntu Member](https://ubuntu.com/community/membership/application);
+- Acknowledge our [contributor licence agreement](https://ubuntu.com/legal/contributors);
+  - (Optional) Although not required for the community playground, we’d also recommend [signing the contributor agreement](https://ubuntu.com/legal/contributors/agreement), as that would later facilitate your onboarding as an official contributor of a Canonical rock if desired;
+- Open a [new Onboarding issue](https://github.com/ubuntu-rocks/.github/issues/new?assignees=&labels=onboarding&projects=ubuntu-rocks%2F2&template=onboarding.yml&title=%5Bonboarding%5D+%3Creplace+by+your+name%2Fusername%3E) and wait for a board member to get back to you.
+
+<!-- 
 
 ### Creating my first ROCK
 
-Once your onboarding process is finalized, you'll find your ROCKs Project `<rocks-project>` hosted at `https://github.com/ubuntu-rocks/<rocks-project>`.
-
-At this stage, you are ready to start building and publishing your ROCKs. Read the #FAQ below, for
-a detailed list of actions that will guide you through this process.
-
-#### Step-by-step
-
- 1. **Make sure your ROCKs project is structured the right way**
-
-There is a convention in place whereby a ROCKs Project is deemed to be valid if,
-and only if, it is structured a certain way. There is an example of a ROCKs project at
-<https://github.com/ubuntu-rocks/mock-rock> that you can use as a template for your own repository.
- 
- 2. **Test your changes in development branches**
-
-As a best practice and before committing to a channel branch (next step), make sure the new changes you are introducing are actually ready for publishing. You can add any CI/CD you want to your repository...it is yours after all, so if you have ROCK-specific tests you'd like to run, go ahead.
-
- 3. **Commit to channel branches**
-
-When ready to publish a new version of a ROCK, you should commit your changes (from your development branch) to a **channel** branch. Example:
-
-```bash
-git checkout -b channels/1.0/edge
-git push origin channels/1.0/edge
-```
-
-The naming convention for a channel branch is: *channels/\<track\>/\<risk\>/\<free text\>*. Tracks and risks are inherited concepts from Snaps, so if you're not familiar with those, please read <https://snapcraft.io/docs/channels>. If *\<risk\>* is empty, there will be no default risk for releasing your ROCK, and thus a Git "release" tag won't be created (you'll have to create it manually later on, as if you were releasing it for the first time - see point 6. below).
-
- 4. **Wait for a notification indicating the end of the ROCK build process**
-  
-[This organization](https://github.com/ubuntu-rocks) has a [centralized build repository](https://github.com/ubuntu-rocks/.build) from where all ROCKs are built, tested and published, automatically. This CI/CD pipeline will only build ROCKs for channels branches. The organization with regularly (as frequently as every 5 minutes) look for new commits in these "channel" branches. If you have pushed new commits since the last build, then a new build will be triggered for the most recent commit in your channel branch. 
-
-During a build, the build-triggering commit will be updated with "checks". These [GitHub Checks](https://docs.github.com/en/rest/checks) will hint you on where your commit is within the build pipeline.
-
- 5. **Find your new ROCK revision**
-
-At the end of every successful CI/CD pipeline, your ROCK will be pushed to multiple registries, with an OCI tag that has the following format: *\<rock name\>:\<rock version\>-\<ubuntu base\>\_\<revision number\>*.
-
-To pin point the commit corresponding to that revision of your ROCK, an immutable Git tag will also be created an pushed into your ROCK project, with the following naming convention: *channels/\<track\>/\<rock name\>/\<rock version\>/\<ubuntu base\>/\<revision number\>*.
-
- 6. **Release your ROCK into new channels**
-
-If you've specified the risk in the channel branch name (like the example above), then, upon a successful build, the CI/CD will automatically <u>request</u> your ROCK to be released into the provided track and risk, from the channel branch name. 
-
-How can you <u>request</u> the release of your ROCK?
- - Option 1 - via the GitHub web interface:
-    - go to the [centralized build repository](https://github.com/ubuntu-rocks/.build)
-    - navigate to [Actions](https://github.com/ubuntu-rocks/.build/actions)
-    - select the ["Release my ROCK" workflow](https://github.com/ubuntu-rocks/.build/actions/workflows/release-my-rock.yml)
-    - manually run the workflow, by clicking on the "Run workflow" button on the right side, and filling in the necessary attributes.
- - Option 2 - via Git tags
-    - checkout an already existing build Git tag, with the desired ROCK revision number (aka *channels/\<track\>/\<rock name\>/\<rock version\>/\<ubuntu base\>/\<revision number\>*)
-    - re-tag this Git tag into the following format: *release/\<rock name\>/\<revision number\>/\<track\>/\<risk\>*
-    - push the release tag
-
- 7. **Wait for your ROCK to be released**
-
-Once more, the centralized build processes will pick up your release request, and release your ROCK into the desired track/channel. A GitHub release will be created upon a successful release, associated with your Git tag.
-
- 8. **Find your ROCK released in the registry**
-
-Alongside your first OCI tag, upon each release you will also find the original revision of your ROCK re-published with new OCI tags:
-
-  - *\<rock name\>:\<rock version\>-\<ubuntu base\>\_\<risk\>\_\<revision number\>*
-  - *\<rock name\>:\<rock version\>-\<ubuntu base\>\_\<risk\>*
-  - *\<rock name\>:\<rock version\>\_\<risk\>*
-  - *\<rock name\>:\<risk\>*
-  - *\<rock name\>:\<track\>*
-    - this last one is only published when you're releasing to the "stable" risk.
-<!-- 
-
-## 👩‍💻 Useful resources
-
-Coming soon: CODE_OF_CONDUCT.md, CONTRIBUTING.md, SECURITY.md, SUPPORT.md	
  -->
+
+## 💬 Communication
+
+|  |  |
+|---|---|
+| Matrix | Join our community space at [#rocks:ubuntu.com](https://matrix.to/#/#rocks:ubuntu.com). Newcomers are encouraged to introduce themselves in the general chatroom (#rocks-general:ubuntu.com) and browse the community space for other useful rooms. |
+| Discourse | Important events and announcements are posted, in their long format, at <https://discourse.ubuntu.com/c/rocks>. These may also be cross-referenced in Matrix.<br>NOTE: Discourse is not being used for technical support. |
+| Blog | Articles about Ubuntu containers: <https://ubuntu.com/blog/tag/containers>.  |
+
+## 🗓️ Meetings
+
+The Rocks Community has a [public calendar](https://calendar.google.com/calendar/embed?src=c_96a86ea229cc1196b3a509211b76d3fc0bc24dcc02d4bdb48d037dd8a024ee6b%40group.calendar.google.com&ctz=Europe%2FZurich) ([iCal](https://calendar.google.com/calendar/ical/c_96a86ea229cc1196b3a509211b76d3fc0bc24dcc02d4bdb48d037dd8a024ee6b%40group.calendar.google.com/public/basic.ics)) you can subscribe to, in order to be up to date with all community meetings and events!
+
+### Fortnightly office hours
+
+Called the “Starcraft Clinics”, this meeting takes place every two weeks and joins forces with the developers and users of Rockcraft and other craft tools (like Snapcraft and Charmcraft). Everyone is welcome to come over and discuss issues with the crafts. This is an opportunity to get some face-to-face time with the experts and work together through those issues.
+
+Time: every two Fridays, at 1 pm UTC
+<br>
+Location: <https://meet.google.com/ixc-nucm-hjn>
+
+### Monthly meetings
+
+These are general-purpose meetings that take place once a month. Everyone is welcome to join and share their work, discuss containers and propose features.
+
+Time: every last Thursday of the month, at 2 pm UTC
+<br>
+Location: <https://meet.google.com/hfe-fbky-vnh>
+<br>
+Meeting agenda and notes: <https://hackmd.io/@vaCZ_Zv3TOuNXqiub-KbKw/HyUZvxytT>
+
+## 🎩 Community Governance Bodies
+
+### Rocks Community Council
+
+The primary governing body which is responsible for the community's processes
+and structure.
+
+| Name | Contact | Appointed on |
+|---|---|---|
+| Cristovao Cordeiro ([@cjdcordeiro](https://github.com/cjdcordeiro)) | [@cjdc:ubuntu.com](https://matrix.to/#/@cjdc:ubuntu.com) | 12/13/2023 |
+| Sergio Schvezov ([@sergiusens](https://github.com/sergiusens)) | [@sergiusens:ubuntu.com](https://matrix.to/#/@sergiusens:ubuntu.com) | 12/13/2023 |
+
+### Rocks Technical Board
+
+Tech-savvy community members who are responsible for making difficult technical
+decisions.
+| Name | Contact | Appointed on |
+|---|---|---|
+| Tiago Nobrega ([@tigarmo](https://github.com/tigarmo)) | [@tigarmo:ubuntu.com](https://matrix.to/#/@tigarmo:ubuntu.com) | 12/13/2023 |
+| Anas El Husseini ([@linostar](https://github.com/linostar)) | [@linux.anas:ubuntu.com](https://matrix.to/#/@linux.anas:ubuntu.com) | 12/13/2023 |
+
+## ❓ FAQ
+
+### What is a rock?
+
+A rock is an **OCI-compliant** container image, just like those in container registries such as Docker Hub. Rocks are, however, meticulously designed to meet cloud-native software’s security, stability, and reliability requirements. Based on Ubuntu LTS, rocks promote a secure, user-centric and predictable experience at both build and run time, through declarative build recipes, **Chisel** primitives and a powerful process manager as the entrypoint - **Pebble**.
+
+Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/rocks/) to learn more about rocks.
+
+### “OCI-compliant”, what is that?
+
+The Open Container Initiative ([OCI](https://opencontainers.org/)) is the governance structure responsible for creating the industry standards around container formats and runtimes. Those standards include the [OCI Image Format Specification](https://github.com/opencontainers/image-spec), which is followed by rocks.
+
+### What is Pebble and why is it the entrypoint?
+
+Pebble is a service manager that enables the seamless orchestration of a collection of local service processes as an organised set. It has been designed with custom-tailored features that enhance the overall container experience, treating processes as manageable units and thus making it the ideal candidate for the container’s init process.
+
+Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/pebble/) to learn more about Pebble.
+
+### What is Chisel and why is it important?
+
+Chisel is a tool, developed by Canonical, for extracting well-defined portions (aka slices) of Ubuntu packages into a filesystem. Chiselled rocks contain only the strictly necessary for running the container application, thus reducing the image’s size and attack surface.
+
+Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/chisel/) to learn more about Chisel.
+
+### Does Chisel use package slices? What are those?
+
+A package slice is what Chisel uses in order to know which files from an Ubuntu package to install. For each Ubuntu release, there’s a [Chisel release](https://github.com/canonical/chisel-releases), and each one of those will have one Slice Definitions File per Ubuntu package. This is where slices are declaratively defined. So when you try to install `package_foo`, Chisel will not install the whole `package`, but instead, only the contents defined by slice `foo`.
+
+Read the [guides](https://github.com/canonical/chisel-releases/blob/main/CONTRIBUTING.md#slicing-debian-packages) to learn more about package slicing.
+
+### What is Rockcraft?
+
+Rockcraft is a tool to create rocks! It facilitates their creation by letting you, the user, focus on the content! The chiselling of packages and the abstraction of repetitive steps (like defining the image’s entrypoint, aka Pebble) are embedded in the tool. Plus, it provides a declarative build experience that is familiar to other crafting tools like Snapcraft and Charmcraft.
+
+Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/rockcraft/) to learn more about Rockcraft.
+
+### Why should you adopt rocks?
+
+While they are as OCI-compliant as any other container image in your favourite container registry, the one thing to remember is that the OCI specifications focus solely on functionality and interoperability. Rocks go a step further and extend the [OCI Image Format Specification](https://github.com/opencontainers/image-spec) to add focus on:
+
+- **security**: by relying on well-supported Ubuntu releases and promoting the use of package slices to reduce the image’s size and subsequently its attack surface;
+- **UX**: by empowering the container application’s entrypoint while providing a consistent deployment interface for all containers;
+- **transparency**: by adopting a WYSIWYG approach towards container development and consumption, via the use of declarative builds and extended image metadata.
+
+Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/rocks/#what-sets-rocks-apart) to learn more about what sets rocks apart.
+
+### Why should I care about the Rocks Community Playground?
+
+This GitHub organisation is more than just a playground. It is an entrypoint for community members who want to learn, experiment, and potentially contribute to other rocks, including the ones from Canonical. Apart from being a safe space for development and experimentation, this organisation also offers a set of utilities (like reusable GitHub workflows, issue templates and examples) to speed up the collaborators’ learning curve.
+
+### How can I contribute?
+
+You’ve taken the first step just by reading this FAQ! What else can you do?
+
+1. Be an active **member** of the Rocks Community: provide feedback and create and discuss content about rocks, Chisel, Pebble or any Ubuntu-based container image (via workshops, articles, videos, meetups, etc.). See our [communication channels](#💬-communication) for more.
+1. Help **document** the product and tooling: you can create issues and/or improve the documentation about Rocks and the associated tools.
+1. **Develop** with us: if you’re familiar with Python and/or Go, then you can create bug reports and Pull Requests for [Chisel](https://github.com/canonical/chisel), [Pebble](https://github.com/canonical/pebble) and [Rockcraft](https://github.com/canonical/rockcraft).
+1. Propose **new package slices**: the addition of new package slice definitions is a community effort! Feel free to propose your slice definition in the [chisel-releases repo](https://github.com/canonical/chisel-releases/tree/main).
