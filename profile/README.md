@@ -78,7 +78,7 @@ Location: <https://meet.google.com/ixc-nucm-hjn>
 
 These are general-purpose meetings that take place once a month. Everyone is welcome to join and share their work, discuss containers and propose features.
 
-Time: every last Thursday of the month, at 2 pm UTC
+Time: every last Tuesday of the month, at 1 pm UTC
 <br>
 Location: <https://meet.google.com/hfe-fbky-vnh>
 <br>
