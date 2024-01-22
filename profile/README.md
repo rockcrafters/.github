@@ -109,35 +109,35 @@ decisions.
 
 ### What is a rock?
 
-A rock is an **OCI-compliant** container image, just like those in container registries such as Docker Hub. Rocks are, however, meticulously designed to meet cloud-native software’s security, stability, and reliability requirements. Based on Ubuntu LTS, rocks promote a secure, user-centric and predictable experience at both build and run time, through declarative build recipes, **Chisel** primitives and a powerful process manager as the entrypoint - **Pebble**.
+A rock is an **OCI-compliant** container image, just like those in container registries such as Docker Hub. Rocks are, however, meticulously designed to meet cloud-native software’s security, stability, and reliability requirements. Based on Ubuntu LTS, rocks promote a secure, user-centric and predictable experience at both build and run time, through declarative build recipes, **Chisel** primitives and a powerful service manager as the entrypoint - **Pebble**.
 
 Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/rocks/) to learn more about rocks.
 
-### “OCI-compliant”, what is that?
+### What do you mean by “OCI-compliant”?
 
-The Open Container Initiative ([OCI](https://opencontainers.org/)) is the governance structure responsible for creating the industry standards around container formats and runtimes. Those standards include the [OCI Image Format Specification](https://github.com/opencontainers/image-spec), which is followed by rocks.
+The Open Container Initiative ([OCI](https://opencontainers.org/)) is the governance structure responsible for creating the industry standards around container formats and runtimes. Those standards include the [OCI Image Format Specification](https://github.com/opencontainers/image-spec), followed by rocks.
 
-### What is Pebble and why is it the entrypoint?
+### What is Pebble, and why is it the entrypoint?
 
-Pebble is a service manager that enables the seamless orchestration of a collection of local service processes as an organised set. It has been designed with custom-tailored features that enhance the overall container experience, treating processes as manageable units and thus making it the ideal candidate for the container’s init process.
+Pebble is a service manager that enables the seamless orchestration of a collection of local service processes as an organised set, i.e. it treats your commands as manageable units which can be controlled together as a group (called Pebble “plan”). It has been designed with [custom-tailored features](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/pebble/#what-to-expect) that enhance the overall container experience, thus making it the ideal candidate for the container’s init process.
 
 Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/pebble/) to learn more about Pebble.
 
-### What is Chisel and why is it important?
+### What is Chisel, and why is it important?
 
 Chisel is a tool, developed by Canonical, for extracting well-defined portions (aka slices) of Ubuntu packages into a filesystem. Chiselled rocks contain only the strictly necessary for running the container application, thus reducing the image’s size and attack surface.
 
 Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/chisel/) to learn more about Chisel.
 
-### Does Chisel use package slices? What are those?
+### Chisel uses package slices. What are those?
 
-A package slice is what Chisel uses in order to know which files from an Ubuntu package to install. For each Ubuntu release, there’s a [Chisel release](https://github.com/canonical/chisel-releases), and each one of those will have one Slice Definitions File per Ubuntu package. This is where slices are declaratively defined. So when you try to install `package_foo`, Chisel will not install the whole `package`, but instead, only the contents defined by slice `foo`.
+A package slice defines a subset of the package’s contents that Chisel should install. For each Ubuntu release, there’s a [Chisel release](https://github.com/canonical/chisel-releases). In a Chisel release, you may find one Slice Definitions File (SDF) for each Ubuntu package on that release. The SDFs are the YAML files where the package slices are declaratively defined. Finally, Chisel refers to package slices via an underscore-based naming convention, e.g. if you try to install `package_foo`, Chisel will not install the whole `package`, but instead, only the contents defined by slice `foo`.
 
 Read the [guides](https://github.com/canonical/chisel-releases/blob/main/CONTRIBUTING.md#slicing-debian-packages) to learn more about package slicing.
 
 ### What is Rockcraft?
 
-Rockcraft is a tool to create rocks! It facilitates their creation by letting you, the user, focus on the content! The chiselling of packages and the abstraction of repetitive steps (like defining the image’s entrypoint, aka Pebble) are embedded in the tool. Plus, it provides a declarative build experience that is familiar to other crafting tools like Snapcraft and Charmcraft.
+Rockcraft is a tool to create rocks! The chiselling of packages and the abstraction of repetitive steps (like defining the image’s entrypoint) are embedded in the tool, i.e. just tell the tool what packages (or package slices) to install and what commands the container should run, and Rockcraft will implicitly take care of setting those up for you. Plus, it provides a declarative build experience (based on YAML build recipes) that is familiar to other crafting tools like Snapcraft and Charmcraft.
 
 Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/rockcraft/) to learn more about Rockcraft.
 
@@ -146,14 +146,14 @@ Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/exp
 While they are as OCI-compliant as any other container image in your favourite container registry, the one thing to remember is that the OCI specifications focus solely on functionality and interoperability. Rocks go a step further and extend the [OCI Image Format Specification](https://github.com/opencontainers/image-spec) to add focus on:
 
 - **security**: by relying on well-supported Ubuntu releases and promoting the use of package slices to reduce the image’s size and subsequently its attack surface;
-- **UX**: by empowering the container application’s entrypoint while providing a consistent deployment interface for all containers;
-- **transparency**: by adopting a WYSIWYG approach towards container development and consumption, via the use of declarative builds and extended image metadata.
+- **UX**: by providing a powerful and consistent deployment interface for all containers;
+- **transparency**: through a human-readable build format (YAML recipes) and extended image metadata that can be accessed prior to executing the container application.
 
 Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/rocks/#what-sets-rocks-apart) to learn more about what sets rocks apart.
 
 ### Why should I care about the Rocks Community Playground?
 
-This GitHub organisation is more than just a playground. It is an entrypoint for community members who want to learn, experiment, and potentially contribute to other rocks, including the ones from Canonical. Apart from being a safe space for development and experimentation, this organisation also offers a set of utilities (like reusable GitHub workflows, issue templates and examples) to speed up the collaborators’ learning curve.
+This GitHub organisation is more than just a playground. It is an entry point for community members who want to learn, experiment, and potentially contribute to other rocks, including the ones from Canonical. Apart from being a safe space for development and experimentation, this organisation also offers a set of utilities to help members get familiar with rocks (like rocks-specific GitHub workflows, issue templates and examples).
 
 ### How can I contribute?
 
