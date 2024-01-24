@@ -64,13 +64,13 @@ Is it meant to be a safe space for open collaboration and as such, in order to b
 
 ## 🗓️ Meetings
 
-The Rocks Community has a [public calendar](https://calendar.google.com/calendar/embed?src=c_96a86ea229cc1196b3a509211b76d3fc0bc24dcc02d4bdb48d037dd8a024ee6b%40group.calendar.google.com&ctz=Europe%2FZurich) ([iCal](https://calendar.google.com/calendar/ical/c_96a86ea229cc1196b3a509211b76d3fc0bc24dcc02d4bdb48d037dd8a024ee6b%40group.calendar.google.com/public/basic.ics)) you can subscribe to, in order to be up to date with all community meetings and events!
+The Rocks Community has a [public calendar](https://calendar.google.com/calendar/embed?src=cf1e94218f2a806bac23a480c60d2247c4baf73afe0aa57bba85df3b6bce2f56%40group.calendar.google.com&ctz=Europe%2FZurich) ([iCal](https://calendar.google.com/calendar/ical/cf1e94218f2a806bac23a480c60d2247c4baf73afe0aa57bba85df3b6bce2f56%40group.calendar.google.com/public/basic.ics)) you can subscribe to, in order to be up to date with all community meetings and events!
 
 ### Fortnightly office hours
 
 Called the “Starcraft Clinics”, this meeting takes place every two weeks and joins forces with the developers and users of Rockcraft and other craft tools (like Snapcraft and Charmcraft). Everyone is welcome to come over and discuss issues with the crafts. This is an opportunity to get some face-to-face time with the experts and work together through those issues.
 
-Time: every two Fridays, at 1 pm UTC
+Time: every two Fridays, at 3 pm CET
 <br>
 Location: <https://meet.google.com/ixc-nucm-hjn>
 
