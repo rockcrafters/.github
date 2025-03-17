@@ -33,7 +33,7 @@ Whether it is about rocks, Chisel, or Ubuntu containers in general, your partici
 There are many ways you can participate in the Rocks Community. Just find the right level of engagement that fits you:
 
 - Join the [Rocks Community space in Matrix](https://matrix.to/#/#rocks:ubuntu.com), which is your direct line of communication to both developers and users;
-- The [Rocks Discourse](https://discourse.ubuntu.com/c/rocks) is where contributors shape ideas through open discussions;
+- The [Rocks Discourse](https://discourse.ubuntu.com/c/project/rocks/117) is where contributors shape ideas through open discussions;
 - To become an official member of the Rocks Community, you may apply to be an external collaborator in this [Rocks Community Playground](https://github.com/ubuntu-rocks), putting you on a path to eventually becoming an official [Ubuntu Member](https://ubuntu.com/community/membership) and contributing to our Ubuntu Rocks.
 
 ### Membership Application
@@ -59,7 +59,7 @@ Is it meant to be a safe space for open collaboration and as such, in order to b
 |  |  |
 |---|---|
 | Matrix | Join our community space at [#rocks:ubuntu.com](https://matrix.to/#/#rocks:ubuntu.com). Newcomers are encouraged to introduce themselves in the general chatroom (#rocks-general:ubuntu.com) and browse the community space for other useful rooms. |
-| Discourse | Important events and announcements are posted, in their long format, at <https://discourse.ubuntu.com/c/rocks>. These may also be cross-referenced in Matrix.<br>NOTE: Discourse is not being used for technical support. |
+| Discourse | Important events and announcements are posted, in their long format, at https://discourse.ubuntu.com/c/project/rocks/. These may also be cross-referenced in Matrix.<br>NOTE: Discourse is not being used for technical support. |
 | Blog | Articles about Ubuntu containers: <https://ubuntu.com/blog/tag/containers>.  |
 
 ## 🗓️ Meetings
