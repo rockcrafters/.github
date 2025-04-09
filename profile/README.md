@@ -34,7 +34,7 @@ There are many ways you can participate in the Rocks Community. Just find the ri
 
 - Join the [Rocks Community space in Matrix](https://matrix.to/#/#rocks:ubuntu.com), which is your direct line of communication to both developers and users;
 - The [Rocks Discourse](https://discourse.ubuntu.com/c/project/rocks/117) is where contributors shape ideas through open discussions;
-- To become an official member of the Rocks Community, you may apply to be an external collaborator in this [Rocks Community Playground](https://github.com/ubuntu-rocks), putting you on a path to eventually becoming an official [Ubuntu Member](https://ubuntu.com/community/membership) and contributing to our Ubuntu Rocks.
+- To use this Rockcrafters playground, you may ask to be onboarded [here](https://github.com/rockcrafters/.github/issues/new?template=onboarding.yml).
 
 ### Membership Application
 
