@@ -54,56 +54,9 @@ Is it meant to be a safe space for open collaboration and as such, in order to b
 
  -->
 
-## 💬 Communication
+## Community details
 
-|  |  |
-|---|---|
-| Matrix | Join our community space at [#rocks:ubuntu.com](https://matrix.to/#/#rocks:ubuntu.com). Newcomers are encouraged to introduce themselves in the general chatroom (#rocks-general:ubuntu.com) and browse the community space for other useful rooms. |
-| Discourse | Important events and announcements are posted, in their long format, at https://discourse.ubuntu.com/c/project/rocks/. These may also be cross-referenced in Matrix.<br>NOTE: Discourse is not being used for technical support. |
-| Blog | Articles about Ubuntu containers: <https://ubuntu.com/blog/tag/containers>.  |
-
-## 🗓️ Meetings
-
-The Rocks Community has a [public calendar](https://calendar.google.com/calendar/embed?src=cf1e94218f2a806bac23a480c60d2247c4baf73afe0aa57bba85df3b6bce2f56%40group.calendar.google.com&ctz=Europe%2FZurich) ([iCal](https://calendar.google.com/calendar/ical/cf1e94218f2a806bac23a480c60d2247c4baf73afe0aa57bba85df3b6bce2f56%40group.calendar.google.com/public/basic.ics)) you can subscribe to, in order to be up to date with all community meetings and events!
-
-### Fortnightly office hours
-
-Called the “Starcraft Clinics”, this meeting takes place every two weeks and joins forces with the developers and users of Rockcraft and other craft tools (like Snapcraft and Charmcraft). Everyone is welcome to come over and discuss issues with the crafts. This is an opportunity to get some face-to-face time with the experts and work together through those issues.
-
-Time: every two Fridays, at 3 pm CET
-<br>
-Location: <https://meet.google.com/ixc-nucm-hjn>
-
-### Monthly meetings
-
-These are general-purpose meetings that take place once a month. Everyone is welcome to join and share their work, discuss containers and propose features.
-
-Time: every last Tuesday of the month, at 1 pm UTC
-<br>
-Location: <https://meet.google.com/hfe-fbky-vnh>
-<br>
-Meeting agenda and notes: <https://hackmd.io/@vaCZ_Zv3TOuNXqiub-KbKw/HyUZvxytT>
-
-## 🎩 Community Governance Bodies
-
-### Rocks Community Council
-
-The primary governing body which is responsible for the community's processes
-and structure.
-
-| Name | Contact | Appointed on |
-|---|---|---|
-| Cristovao Cordeiro ([@cjdcordeiro](https://github.com/cjdcordeiro)) | [@cjdc:ubuntu.com](https://matrix.to/#/@cjdc:ubuntu.com) | 12/13/2023 |
-| Sergio Schvezov ([@sergiusens](https://github.com/sergiusens)) | [@sergiusens:ubuntu.com](https://matrix.to/#/@sergiusens:ubuntu.com) | 12/13/2023 |
-
-### Rocks Technical Board
-
-Tech-savvy community members who are responsible for making difficult technical
-decisions.
-| Name | Contact | Appointed on |
-|---|---|---|
-| Tiago Nobrega ([@tigarmo](https://github.com/tigarmo)) | [@tigarmo:ubuntu.com](https://matrix.to/#/@tigarmo:ubuntu.com) | 12/13/2023 |
-| Anas El Husseini ([@linostar](https://github.com/linostar)) | [@linux.anas:ubuntu.com](https://matrix.to/#/@linux.anas:ubuntu.com) | 12/13/2023 |
+For more details about the community meetings, communication channels, and governance bodies, please visit https://ubuntu.com/community/governance/teams/rocks.
 
 ## ❓ FAQ
 
