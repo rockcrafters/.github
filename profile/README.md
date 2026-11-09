@@ -64,7 +64,7 @@ For more details about the community meetings, communication channels, and gover
 
 A rock is an **OCI-compliant** container image, just like those in container registries such as Docker Hub. Rocks are, however, meticulously designed to meet cloud-native software’s security, stability, and reliability requirements. Based on Ubuntu LTS, rocks promote a secure, user-centric and predictable experience at both build and run time, through declarative build recipes, **Chisel** primitives and a powerful service manager as the entrypoint - **Pebble**.
 
-Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/explanation/rocks/) to learn more about rocks.
+Read the [docs](https://ubuntu.com/containers/rockcraft/docs/1/explanation/rocks/) to learn more about rocks.
 
 ### What do you mean by “OCI-compliant”?
 
