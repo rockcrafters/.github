@@ -84,7 +84,7 @@ Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/exp
 
 ### Chisel uses package slices. What are those?
 
-A package slice defines a subset of the package’s contents that Chisel should install. For each Ubuntu release, there’s a [Chisel release](https://github.com/canonical/chisel-releases). In a Chisel release, you may find one Slice Definitions File (SDF) for each Ubuntu package on that release. The SDFs are the YAML files where the package slices are declaratively defined. Finally, Chisel refers to package slices via an underscore-based naming convention, e.g. if you try to install `package_foo`, Chisel will not install the whole `package`, but instead, only the contents defined by slice `foo`.
+A package slice defines a subset of the package's contents that Chisel should install. For each Ubuntu release, there's a [Chisel release](https://github.com/canonical/chisel-releases). In a Chisel release, you may find one Package Slices File for each Ubuntu package on that release. These are the YAML files where the package slices are declaratively defined. Finally, Chisel refers to package slices via an underscore-based naming convention, e.g. if you try to install `package_foo`, Chisel will not install the whole `package`, but instead, only the contents defined by slice `foo`.
 
 Read the [guides](https://github.com/canonical/chisel-releases/blob/main/CONTRIBUTING.md#slicing-debian-packages) to learn more about package slicing.
 
@@ -115,4 +115,4 @@ You’ve taken the first step just by reading this FAQ! What else can you do?
 1. Be an active **member** of the Rocks Community: provide feedback and create and discuss content about rocks, Chisel, Pebble or any Ubuntu-based container image (via workshops, articles, videos, meetups, etc.). See our [communication channels](#💬-communication) for more.
 1. Help **document** the product and tooling: you can create issues and/or improve the documentation about Rocks and the associated tools.
 1. **Develop** with us: if you’re familiar with Python and/or Go, then you can create bug reports and Pull Requests for [Chisel](https://github.com/canonical/chisel), [Pebble](https://github.com/canonical/pebble) and [Rockcraft](https://github.com/canonical/rockcraft).
-1. Propose **new package slices**: the addition of new package slice definitions is a community effort! Feel free to propose your slice definition in the [chisel-releases repo](https://github.com/canonical/chisel-releases/tree/main).
+1. Propose **new package slices**: the addition of new package slices is a community effort! Feel free to propose your slices in the [chisel-releases repo](https://github.com/canonical/chisel-releases/tree/main).
