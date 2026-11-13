@@ -84,7 +84,7 @@ Read the [docs](https://canonical-rockcraft.readthedocs-hosted.com/en/latest/exp
 
 ### Chisel uses package slices. What are those?
 
-A package slice defines a subset of the package's contents that Chisel should install. For each Ubuntu release, there's a [Chisel release](https://github.com/canonical/chisel-releases). In a Chisel release, you may find one Package Slices File for each Ubuntu package on that release. These are the YAML files where the package slices are declaratively defined. Finally, Chisel refers to package slices via an underscore-based naming convention, e.g. if you try to install `package_foo`, Chisel will not install the whole `package`, but instead, only the contents defined by slice `foo`.
+A package slice defines a subset of the package's contents that Chisel should install. For each Ubuntu release, there's a [Chisel release](https://github.com/canonical/chisel-releases). In a Chisel release, you may find one package slices file for each Ubuntu package on that release. These are the YAML files where the package slices are declaratively defined. Finally, Chisel refers to package slices via an underscore-based naming convention, e.g. if you try to install `package_foo`, Chisel will not install the whole `package`, but instead, only the contents defined by slice `foo`.
 
 Read the [guides](https://github.com/canonical/chisel-releases/blob/main/CONTRIBUTING.md#slicing-debian-packages) to learn more about package slicing.
 
